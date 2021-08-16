@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="/css/main.css">
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="js/main.js" defer></script>
+<title>Weather API</title>
+</head>
+<body>
+    <form name="weatherSearch" id="city_search">
+        <label for="city">City</label>
+        <input type="text" name="city" id="city">
+        <button type="submit" onclick="display_weather()"id="find_weather">Get Current Weather</button>
+        <section class="list-group weatherFind">
+
+        </section>
+    </form>
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-4 col-sm-12 col-xs-12">
+                <div class="card p-4">
+                    <div class="d-flex">
+                        <h3 class="flex-grow-1" id='chosen_city'>City</h3>
+                        <h4 id='weather_desc'>Cloud Cover</h4>
+                    </div>
+                    <div class="d-flex flex-column temp mt-5 mb-3">
+                        <h1 class="mb-0 font-weight-bold" id="cloud_cover">Temperature  </h1> <span class="small grey">Weather</span>
+                    </div>
+                    <div class="d-flex">
+                        <div class="temp-details flex-grow-1">
+                            <p class="my-1"> <img src="css/images/wind speed icon.png" height="17px"> <span id='wind_speed'> Wind Speed </span> </p>
+                            <p class="my-1"> <i class="fa fa-tint mr-2" aria-hidden="true" id='humid'></i><span> Humidity </span> </p>
+                            <p class="my-1"> <img src="css/images/thermometer.png" height="25px"> <span id='feels_like'> Feels like </span> </p>
+                        </div>
+                        <div>
+                            <h5 id = 'high'>high</h5><span id= 'low'>Low</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
+</body>
+</html>
