@@ -21,14 +21,16 @@ let getJson = async () =>{
     let city = document.querySelector('#city').value;
     // go fetch
     let response = await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial&appid=6346473ca69916a0947487b98ceea782`)
+
     return response.data
+    
 }
+
 
 
 let display_weather = async () =>{
     
     let info = await getJson();
-
 
     // Get Chosen city
     let city_name = info.name
