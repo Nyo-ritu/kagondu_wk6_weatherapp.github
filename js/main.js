@@ -77,6 +77,11 @@ let display_weather = async () =>{
     let temp_feels_like = info.main.feels_like
     let temp_feels_like_display = document.getElementById('feels_like')
     temp_feels_like_display.innerHTML = `feels like ${temp_feels_like} °F right now`
+
+    //Get last 3hrs of rainfall
+    let desc = info.weather[0].description
+    let desc_display = document.getElementById('weather_de')
+    desc_display.innerHTML = desc
     
 
 }
